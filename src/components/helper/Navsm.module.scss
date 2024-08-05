@@ -1,0 +1,26 @@
+/* Navbar styles */
+.header {
+  .Nav-Links {
+    display: none; /* Hide by default */
+
+    @media (min-width: 768px) {
+      display: flex; /* Show on medium to larger screens */
+    }
+  }
+
+  .MenuButtonContainer {
+    display: flex; /* Show by default on smaller screens */
+
+    @media (min-width: 768px) {
+      display: none; /* Hide on medium to larger screens */
+    }
+  }
+
+  .ContactButtonContainer {
+    display: none; /* Hide by default */
+
+    @media (min-width: 768px) {
+      display: flex; /* Show on medium to larger screens */
+    }
+  }
+}

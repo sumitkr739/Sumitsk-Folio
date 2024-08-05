@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,400;0,600;0,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yu+Gothic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* *{
+    border: 1px solid red;
+  } */
+
+  ::-moz-selection {
+    background: #d1d1c7;
+  }
+  ::-webkit-selection {
+    background: #d1d1c7;
+  }
+  ::selection {
+    background: #d1d1c7;
+  }
+
+  .text-smooth {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: "CabinetGrotesk-Variable";
+    src: url("./assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans-Variable";
+    src: url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @media (min-width: 640px) {
+    * {
+      cursor: none;
+    }
+  }
+  a,
+  p,
+  span {
+    @apply font-grotesk;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-general tracking-headings;
+  }
+
+  .font-outline-4 {
+    -webkit-text-stroke: 5px black;
+  }
+
+  .font-outline-3 {
+    -webkit-text-stroke: 4px #0e0e0c;
+  }
+}
+
+@layer components {
+  .button {
+    @apply bg-accent-300 px-8 py-3 text-secondary-200 rounded-full;
+  }
+}
+
+@layer utilities {
+  .title {
+    clip-path: polygon(0 0, 200% 0, 100% 100%, 0% 100%);
+    line-height: clamp(6rem, 16vw, 10rem); /* Set the desired line height */
+  }
+
+  nav a:hover ~ .cursor {
+    transform: scale(5);
+    opacity: 0;
+  }
+
+  .section-heading {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+.Nav-Logo {
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.portfolio-span {
+  font-family: "Irish Grover", system-ui;
+  font-size: 60px;
+}
+
+.portfolio-pencil {
+  @media (max-width: 640px) {
+    height: 8vh;
+    width: 8vw;
+  }
+}
+
+@layer base {
+  .portfolio-pencil {
+    height: 6vw;
+    width: 6vw;
+  }
+
+  @media (max-width: 640px) {
+    .portfolio-pencil {
+      height: 8vh;
+      width: 8vh;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .portfolio-pencil {
+      height: 4vw;
+      width: 4vw;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+:disabled {
+  cursor: default;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.text-body-1 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+.text-body-2 {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+.text-body-3 {
+  font-size: 1.1rem;
+}
+.text-body-4 {
+  font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+.text-heading-1 {
+  font-size: clamp(3.4rem, 8vw, 5.66rem);
+}
+
+.text-heading-2 {
+  font-size: clamp(2.4rem, 8vw, 5.66rem);
+}
+.text-heading-3 {
+  /* font-size: clamp(3rem, 5vw, 2.75rem); */
+  font-size: 2rem;
+}
+.text-special {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+.text-title {
+  font-size: clamp(3.75rem, 14vw, 8.75rem);
+}
+
+.bg-secondary-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+}
+
+.bg-secondary-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(140 140 115 / var(--tw-bg-opacity));
+}
+.bg-secondary-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(112 112 92 / var(--tw-bg-opacity));
+}
+
+.cardContainer {
+  position: sticky;
+  top: 0px;
+}
+
+.gif-background {
+  background-image: url("https://media.giphy.com/media/HkEDr0jVekaZO/giphy.gif");
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: cover;
+}
+
+@keyframes gradientBorder {
+  0% {
+    border-color: #8c8c73; /* Red */
+  }
+  25% {
+    border-color: #2d2e1e; /* Green */
+  }
+  50% {
+    border-color: #efefe4; /* Blue */
+  }
+  75% {
+    border-color: #a8c7a2; /* Magenta */
+  }
+  100% {
+    border-color: #9d9f74; /* Red */
+  }
+}
+
+.animate-gradient-border {
+  animation: gradientBorder 3s linear infinite;
+  border-style: solid;
+}

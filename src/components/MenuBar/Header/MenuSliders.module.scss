@@ -1,0 +1,15 @@
+.header {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  bottom: 0;
+
+  .menu {
+    width: 480px;
+    height: 650px;
+    // background-color: #c9fd74;
+    background-color: #0ba34e;
+    border-radius: 25px;
+    position: relative;
+  }
+}
